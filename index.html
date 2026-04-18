@@ -6,7 +6,7 @@
 </head>
 <body bgcolor="lightblue">
 <div class="container">
-    <h2 align="center">Student Feedback Form</h2>
+    <h2 align="center"><u><i>Student Feedback Form</i></u></h2>
 
     <form action="#">
         <table align="center" border="5" cellpadding="20" width="800" bgcolor="lightgray">
@@ -24,7 +24,7 @@
                 <td><input type="email" id="email" name="email" required></td>
             </tr>
 
-            <td>
+            <tr>
         <select id="course" name="course" required>
             <option value="">--Select Course--</option>
              <option value="wdl">WDL Lab</option>
@@ -34,6 +34,7 @@
              <option value="english">English</option>
              <option value="maths">Maths</option>
         </select>
+        <br><small>Choose one course</small>
     </td>
 </tr>
 
@@ -51,16 +52,15 @@
                 </td>
             </tr>
             <tr>
-                <td><label>Rate the Course (1-5):</label></td>
-                <td>
-                    <input type="radio" name="rating" value="1" required> 1
-                    <input type="radio" name="rating" value="2"> 2
-                    <input type="radio" name="rating" value="3"> 3
-                    <input type="radio" name="rating" value="4"> 4
-                    <input type="radio" name="rating" value="5"> 5
-                    <br><i>(1 = Poor, 5 = Excellent)</i>
-                </td>
-            </tr>
+    <td><label>Rate the Course:</label></td>
+    <td>
+        <input type="radio" name="rating" value="1" required> 1 - Poor <br>
+        <input type="radio" name="rating" value="2"> 2 - Fair <br>
+        <input type="radio" name="rating" value="3"> 3 - Good <br>
+        <input type="radio" name="rating" value="4"> 4 - Very Good <br>
+        <input type="radio" name="rating" value="5"> 5 - Excellent
+    </td>
+</tr>
 
              <tr>
                 <td><label for="comments">Comments:</label></td>
