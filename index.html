@@ -9,7 +9,7 @@
     <h2>Student Feedback Form</h2>
 
     <form action="#">
-        <table align="center" border="1" cellpadding="15" width="600">
+        <table align="center" border="1" cellpadding="15" width="600" bgcolor="lightgray">
             <tr>
                 <td><label for="name">First Name:</label></td>
                 <td><input type="text" id="name" name="name" required></td>
@@ -23,6 +23,13 @@
                 <td><label for="email">Email Address:</label></td>
                 <td><input type="email" id="email" name="email" required></td>
             </tr>
+
+            <td>
+        <select id="course" name="course" required>
+            <option value="">--Select Course--</option>
+        </select>
+    </td>
+</tr>
 
             <tr>
                 <td><label>Course Difficulty:</label></td>
@@ -56,7 +63,7 @@
                 </td>
             </tr>
              <tr>
-                <td colspan="2" align="center" width="800">
+                <td colspan="2" align="center" width="800" bgcolor="lightgray">
                     <input type="submit" value="Submit Feedback">
                 </td>
             </tr>
