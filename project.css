@@ -13,3 +13,8 @@ fieldset {
     margin-bottom: 20px;
     background-color: #ffffff;
 }
+legend {
+    font-size: 18px;
+    color: #0073e6;
+}
+
