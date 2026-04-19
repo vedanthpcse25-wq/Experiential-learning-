@@ -17,4 +17,10 @@ legend {
     font-size: 18px;
     color: #0073e6;
 }
+input, select, textarea {
+    width: 95%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
