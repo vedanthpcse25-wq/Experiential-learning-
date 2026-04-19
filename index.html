@@ -5,75 +5,102 @@
     <title>Experiential-learning</title>
 </head>
 <body>
+
 <div class="container">
     <h2 align="center"><u><i>Student Feedback Form</i></u></h2>
+
     <form action="#">
-        <table align="center" border="1" cellpadding="20" width="650">
-            <tr>
-                <td><label for="name">First Name:</label></td>
-                <td><input type="text" id="name" name="name" required></td>
-            </tr>
-            <tr>
-                <td><label for="lname">Last Name:</label></td>
-                <td><input type="text" id="lname" name="lname" required></td>
-            </tr>
-            <tr>
-                <td><label for="email">Email Address:</label></td>
-                <td><input type="email" id="email" name="email" required></td>
-            </tr>
-            <tr>
-    <td><label for="date">Date:</label></td>
-    <td>
-        <input type="date" id="date" name="date" required>
-    </td>
-</tr>
-         <td><label for="course">Select Course:</label></td>
-    <td>
-        <select id="course" name="course" required>
-            <option value="">Select Course</option>
-            <option value="wdl">WDL Lab</option>
-            <option value="smp">SMP Lab</option>
-            <option value="ee">EE Lab</option>
-            <option value="llc">LLC Lab</option>
-             <option value="maths">Maths</option>
-            <option value="english">English</option>
-        </select>
-        <small>Choose one course.</small>
-    </td>
-</tr>
-       <tr>
-          <td><label>Course Difficulty:</label></td>
-        <td>
-            <input type="radio" id="easy" name="difficulty" value="easy" required>
-            <label for="easy">Easy</label>     
-            <input type="radio" id="med" name="difficulty" value="medium">
-            <label for="med">Medium</label>
-            <input type="radio" id="hard" name="difficulty" value="hard">
-            <label for="hard">Hard</label>
-      </td>
-          </tr>
-          <tr>
-    <td><label>Rate the Course:</label></td>
-    <td>
-        <input type="radio" name="rating" value="1" required> 1 - Poor <br>
-        <input type="radio" name="rating" value="2"> 2 - Fair <br>
-        <input type="radio" name="rating" value="3"> 3 - Good <br>
-        <input type="radio" name="rating" value="4"> 4 - Very Good <br>
-        <input type="radio" name="rating" value="5"> 5 - Excellent
-    </td>
-</tr>
-       <tr>
-         <td><label for="comments">Comments:</label></td>
-                <td>
-                <textarea id="comments" name="comments" rows="5" cols="30" required></textarea>
-                </td>
-            </tr>
-             <tr>
-                <td colspan="4" align="center" width="800"> 
-                <input type="submit" value="Submit Feedback">
-                </td>
-            </tr>
+        <fieldset>
+            <legend><b>Student Details</b></legend>
+
+            <table align="center" border="1" cellpadding="15" width="650">
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="name" required></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lname" required></td>
+                </tr>
+
+                <tr>
+                    <td>Email Address:</td>
+                    <td><input type="email" name="email" required></td>
+                </tr>
+
+                <tr>
+                    <td>Student Roll No:</td>
+                    <td><input type="text" name="roll" required></td>
+                </tr>
             </table>
- </form>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend><b>Course</b></legend>
+
+            <table align="center" border="1" cellpadding="15" width="650">
+
+                <tr>
+                    <td>Date:</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+
+                <tr>
+                    <td>Select Course:</td>
+                    <td>
+                        <select name="course" required>
+                            <option value="">Select Course</option>
+                            <option>WDL Lab</option>
+                            <option>SMP Lab</option>
+                            <option>EE Lab</option>
+                            <option>LLC Lab</option>
+                            <option>Maths</option>
+                            <option>English</option>
+                        </select>
+                       
+          
+                    </td>
+                </tr>
+
+                <tr>
+                             <td>Course Difficulty:</td>
+                    <td>
+                        <input type="radio" name="difficulty" value="easy" required> Easy
+                        <input type="radio" name="difficulty" value="medium"> Medium
+                        <input type="radio" name="difficulty" value="hard"> Hard
+                    </td>
+                </tr>
+                <tr>
+                    <td>Rate the Course:</td>
+                    <td>
+                        <input type="radio" name="rating" value="1" required> 1 - Poor <br>
+                        <input type="radio" name="rating" value="2"> 2 - Fair <br>
+                        <input type="radio" name="rating" value="3"> 3 - Good <br>
+                        <input type="radio" name="rating" value="4"> 4 - Very Good <br>
+                        <input type="radio" name="rating" value="5"> 5 - Excellent
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Comments:</td>
+                    <td>
+                        <textarea name="comments" rows="5" cols="30" required></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit Feedback">
+                        <input type="reset" value="Reset Form">
+                    </td>
+                </tr>
+
+            </table>
+        </fieldset>
+
+    </form>
+</div>
+
 </body>
 </html>
