@@ -23,4 +23,8 @@ input, select, textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+input[type="radio"] {
+    width: auto;
+}
+
 
