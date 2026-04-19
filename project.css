@@ -36,12 +36,12 @@ input[type="submit"], input[type="reset"] {
     color: white;
     cursor: pointer;
 }
-
 input[type="reset"] {
     background-color: #999;
 }
 input[type="submit"]:hover {
     background-color: #0059b3;
 }
-
-
+input[type="reset"]:hover {
+    background-color: #666;
+}
