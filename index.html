@@ -7,7 +7,6 @@
 <body>
 <div class="container">
     <h2 align="center"><u><i>Student Feedback Form</i></u></h2>
-
     <form action="#">
         <table align="center" border="1" cellpadding="20" width="650">
             <tr>
@@ -18,7 +17,6 @@
                 <td><label for="lname">Last Name:</label></td>
                 <td><input type="text" id="lname" name="lname" required></td>
             </tr>
-
             <tr>
                 <td><label for="email">Email Address:</label></td>
                 <td><input type="email" id="email" name="email" required></td>
@@ -29,8 +27,7 @@
         <input type="date" id="date" name="date" required>
     </td>
 </tr>
-
-          <td><label for="course">Select Course:</label></td>
+         <td><label for="course">Select Course:</label></td>
     <td>
         <select id="course" name="course" required>
             <option value="">Select Course</option>
@@ -44,21 +41,18 @@
         <small>Choose one course.</small>
     </td>
 </tr>
-
-            <tr>
-                <td><label>Course Difficulty:</label></td>
-                <td>
-                    <input type="radio" id="easy" name="difficulty" value="easy" required>
-                    <label for="easy">Easy</label>
-                    
-                    <input type="radio" id="med" name="difficulty" value="medium">
-                    <label for="med">Medium</label>
-
-                     <input type="radio" id="hard" name="difficulty" value="hard">
-                    <label for="hard">Hard</label>
-                </td>
-            </tr>
-            <tr>
+       <tr>
+          <td><label>Course Difficulty:</label></td>
+        <td>
+            <input type="radio" id="easy" name="difficulty" value="easy" required>
+            <label for="easy">Easy</label>     
+            <input type="radio" id="med" name="difficulty" value="medium">
+            <label for="med">Medium</label>
+            <input type="radio" id="hard" name="difficulty" value="hard">
+            <label for="hard">Hard</label>
+      </td>
+          </tr>
+          <tr>
     <td><label>Rate the Course:</label></td>
     <td>
         <input type="radio" name="rating" value="1" required> 1 - Poor <br>
@@ -68,20 +62,18 @@
         <input type="radio" name="rating" value="5"> 5 - Excellent
     </td>
 </tr>
-
-
-             <tr>
-                <td><label for="comments">Comments:</label></td>
+       <tr>
+         <td><label for="comments">Comments:</label></td>
                 <td>
-                    <textarea id="comments" name="comments" rows="5" cols="30" required></textarea>
+                <textarea id="comments" name="comments" rows="5" cols="30" required></textarea>
                 </td>
             </tr>
              <tr>
                 <td colspan="4" align="center" width="800"> 
-                    <input type="submit" value="Submit Feedback">
+                <input type="submit" value="Submit Feedback">
                 </td>
             </tr>
             </table>
-            </form>
+ </form>
 </body>
 </html>
