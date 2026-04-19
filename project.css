@@ -8,14 +8,21 @@ h2 {
 }
 
 fieldset {
-    border: 2px solid #0073e6;
+    border: 2px solid lightblue;
     border-radius: 10px;
     margin-bottom: 20px;
-    background-color: rgb(215, 134, 134);
+    background-color:lightgray;
+}
+table {
+    background-color: white;
+    border-collapse: collapse;
+}
+table, td {
+    border: 1px solid #ccc;
 }
 legend {
     font-size: 18px;
-    color: #0073e6;
+    color: blue;
 }
 input, select, textarea {
     width: 95%;
