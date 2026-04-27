@@ -50,32 +50,34 @@
         Student Details
     </div>
 
-    
-    <form action="#">
-        <fieldset>
-            <legend><b>Student Details</b></legend>
 
-            <table align="center" border="1" cellpadding="15" width="650">
-                <tr>
-                    <td>Student First Name:</td>
-                    <td><input type="text" name="name" required></td>
-                </tr>
-                <tr>
-                    <td>Student Last Name:</td>
-                    <td><input type="text" name="lname" required></td>
-                </tr>
+     <div class="card-body">
 
-                <tr>
-                    <td>Email Address:</td>
-                    <td><input type="email" name="email" required></td>
-                </tr>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" required>
+            </div>
 
-                <tr>
-                    <td>Student ID:</td>
-                    <td><input type="text" name="roll" required></td>
-                </tr>
-            </table>
-        </fieldset>
+            <div class="col-md-6">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" required>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Student ID</label>
+            <input type="text" class="form-control" required>
+        </div>
+
+    </div>
+</div>
+
 
         <br>
         <fieldset>
