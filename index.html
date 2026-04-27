@@ -79,38 +79,42 @@
 </div>
 
 
-        <br>
-        <fieldset>
-            <legend><b>Course Details</b></legend>
+       <div class="card">
+    <div class="card-header bg-success text-white">
+        Course Details
+    </div>
 
-            <table align="center" border="1" cellpadding="15" width="650">
+    <div class="card-body">
 
-                <tr>
-                    <td>Date:</td>
-                    <td><input type="date" name="date" required></td>
-                </tr>
+        <h5 class="text-secondary mb-3">Academic Information</h5>
 
-                <tr>
-                    <td>Select Course:</td>
-                    <td>
-                        <select name="course" required>
-                            <option value="">Select Course</option>
-                            <option>WDL Lab</option>
-                            <option>SMP Lab</option>
-                            <option>EE Lab</option>
-                            <option>LLC Lab</option>
-                            <option>Maths</option>
-                            <option>English</option>
-                        </select>
-                         <select name="faculty">
-                            <option value="">Select Faculty</option>
-                            <option>Prof. Mayur Kadu</option>
-                            <option>Prof. Abhijeet Thakur</option>
-                            <option>Prof.Abhishek Dhonkse</option>
-                            <option>Prof. Nikhil Chaudhari</option>
-                            <option>Prof. Yogesh Panke</option>
-                            <option>Prof. Shama Khan</option>
-                            </select>
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label class="form-label">Semester</label>
+                <select class="form-select" required>
+                    <option value="">Options</option>
+                    <option>Semester 1</option>
+                    <option>Semester 2</option>
+                    <option>Semester 3</option>
+                    <option>Semester 4</option>
+                    <option>Semester 5</option>
+                    <option>Semester 6</option>
+                    <option>Semester 7</option>
+                    <option>Semester 8</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">Year</label>
+                <select class="form-select" required>
+                    <option value="">Options</option>
+                    <option>First Year</option>
+                    <option>Second Year</option>
+                    <option>Third Year</option>
+                    <option>Final Year</option>
+                </select>
+            </div>
+        </div>
           
                     </td>
                 </tr>
