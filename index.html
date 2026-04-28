@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Experiential-learning</title>
+<meta charset="UTF-8">
+<title>Experiential-learning</title>
 
-<link rel="stylesheet" href="project.css">
- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="project.js"></script>
+<link rel="stylesheet" href="projectex.css">
 
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-</script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+
 </head>
+
 <body class="bg-info-subtle">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><b>Student Feedback Form</b></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact">Contact</a>
-        </li>
-      </ul>
-      <span class="navbar-text">
-        We value your feedback
-      </span>
-    </div>
   </div>
 </nav>
 
@@ -44,14 +27,16 @@
 <h2 class="text-center text-primary mb-4">
     <u><i>Student Feedback Form</i></u>
 </h2>
-<form>
+
+<form id="feedbackForm">
+
+<!-- Student Details -->
 <div class="card mb-4">
     <div class="card-header bg-primary text-white">
         Student Details
     </div>
 
-
-     <div class="card-body">
+    <div class="card-body">
 
         <div class="row mb-3">
             <div class="col-md-6">
@@ -78,8 +63,8 @@
     </div>
 </div>
 
-
-       <div class="card">
+<!-- Course Details -->
+<div class="card">
     <div class="card-header bg-success text-white">
         Course Details
     </div>
@@ -115,8 +100,8 @@
                 </select>
             </div>
         </div>
-          
-                    <div class="row mb-3">
+
+        <div class="row mb-3">
             <div class="col-md-6">
                 <label class="form-label">Batch</label>
                 <select class="form-select" required>
@@ -138,6 +123,7 @@
                 </select>
             </div>
         </div>
+
         <div class="row mb-3">
             <div class="col-md-6">
                 <label class="form-label">Department</label>
@@ -165,18 +151,18 @@
                 </select>
             </div>
         </div>
-        
+
         <div class="row mb-3">
             <div class="col-md-6">
                 <label class="form-label">Course</label>
                 <select class="form-select" required>
                     <option value="">Options</option>
                     <option>WDL Lab</option>
-                            <option>SMP Lab</option>
-                            <option>EE Lab</option>
-                            <option>LLC Lab</option>
-                            <option>Maths</option>
-                            <option>English</option>
+                    <option>SMP Lab</option>
+                    <option>EE Lab</option>
+                    <option>LLC Lab</option>
+                    <option>Maths</option>
+                    <option>English</option>
                 </select>
             </div>
 
@@ -184,61 +170,70 @@
                 <label class="form-label">Faculty</label>
                 <select class="form-select" required>
                     <option value="">Options</option>
-                  <option>Prof. Mayur Kadu</option>
-                            <option>Prof. Abhijeet Thakur</option>
-                            <option>Prof.Abhishek Dhonkse</option>
-                            <option>Prof. Nikhil Chaudhari</option>
-                            <option>Prof. Yogesh Panke</option>
-                            <option>Prof. Shama Khan</option>
+                    <option>Prof. Mayur Kadu</option>
+                    <option>Prof. Abhijeet Thakur</option>
+                    <option>Prof.Abhishek Dhonkse</option>
+                    <option>Prof. Nikhil Chaudhari</option>
+                    <option>Prof. Yogesh Panke</option>
+                    <option>Prof. Shama Khan</option>
                 </select>
             </div>
         </div>
+
         <hr>
+
         <div class="mb-3">
             <label class="form-label"><b>Course Difficulty</b></label><br>
             <input type="radio" name="difficulty" required> Easy
             <input type="radio" name="difficulty"> Medium
             <input type="radio" name="difficulty"> Hard
         </div>
+
         <hr>
+
         <div class="mb-3">
-    <label class="form-label">Rate the Course</label>
+            <label class="form-label">Rate the Course</label>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="rating" required>
-        <label class="form-check-label">1 - Poor</label>
-    </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating" required>
+                <label class="form-check-label">1 - Poor</label>
+            </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="rating">
-        <label class="form-check-label">2 - Fair</label>
-    </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating">
+                <label class="form-check-label">2 - Fair</label>
+            </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="rating">
-        <label class="form-check-label">3 - Good</label>
-    </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating">
+                <label class="form-check-label">3 - Good</label>
+            </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="rating">
-        <label class="form-check-label">4 - Very Good</label>
-    </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating">
+                <label class="form-check-label">4 - Very Good</label>
+            </div>
 
-    <div class="form-check">
-        <input class="form-check-input" type="radio" name="rating">
-        <label class="form-check-label">5 - Excellent</label>
-    </div>
-</div>
-<hr>
- <div class="mb-3">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="rating">
+                <label class="form-check-label">5 - Excellent</label>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="mb-3">
             <label class="form-label">Date</label>
             <input type="date" class="form-control" required>
         </div>
+
         <hr>
+
         <div class="mb-3">
             <label class="form-label">Comments</label>
             <textarea class="form-control" rows="4" required></textarea>
         </div>
+
         <div class="text-center">
             <button type="submit" class="btn btn-primary">Submit</button>
             <button type="reset" class="btn btn-danger">Reset</button>
@@ -246,19 +241,21 @@
 
     </div>
 </div>
-<div class="container my-5">
 
+</form>
+</div>
+
+<!-- About & Contact OUTSIDE form -->
+<div class="container my-5">
     <div class="card">
         <div class="card-header bg-info text-white">
             About & Contact
         </div>
 
         <div class="card-body">
-
             <section id="about" class="mb-4">
                 <h4 class="text-success">About Student Feedback Form</h4>
                 <p>This is a <strong>Student Feedback Form</strong> designed to collect feedback from students about their courses, instructors, and overall learning experience.</p>
-                <p>The feedback collected helps improve the quality of education and teaching methodologies.</p>
 
                 <ul>
                     <li>Student personal details collection</li>
@@ -267,16 +264,25 @@
                     <li>Anonymous feedback option</li>
                 </ul>
             </section>
+
             <hr>
+
             <section id="contact">
                 <h4 class="text-primary">Contact Info</h4>
                 <p><strong>Email:</strong> vedanthp.cse25@sbjit.edu.in</p>
                 <p><strong>Phone:</strong> 7385038223</p>
             </section>
-
         </div>
     </div>
-
 </div>
+
+
 </body>
+<div id="successMessage">
+    <div>
+        <h2 class="text-success"> Feedback Submitted Successfully!</h2>
+        <p>Thank you for your feedback.</p>
+    </div>
+</div>
+
 </html>

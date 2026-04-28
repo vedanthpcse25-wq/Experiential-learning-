@@ -1,19 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    const form = document.querySelector("form");
-    const successMsg = document.getElementById("successMessage");
+    const form = document.getElementById("feedbackForm");
+    const successMessage = document.getElementById("successMessage");
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // Form hide
         form.style.display = "none";
-
-        // Navbar hide (optional)
-        document.querySelector("nav").style.display = "none";
-
-        // Show success message
-        successMsg.style.display = "flex";
+        successMessage.style.display = "block";
     });
 
 });
+function showPopup() {
+    document.getElementById("successPopup").style.display = "flex";
+}
+
+function closePopup() {
+    document.getElementById("successPopup").style.display = "none";
+}
