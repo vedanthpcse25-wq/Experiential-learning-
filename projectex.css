@@ -1,10 +1,13 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: lightcyan;
+    background-color: lightgrey;
 }
 .container {
-    max-width: 900px;
+    background-color: #f8f9fa; /* Bootstrap light grey */
+    padding: 20px;
+    border-radius: 10px;
 }
+
 h2 {
     margin-top: 30px;
     color: lightblue;
@@ -57,4 +60,10 @@ h2 {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     text-align:center;
     z-index: 1000;
+}
+.site-footer {
+    margin-top: 40px;
+}
+.site-footer small {
+    color: #e9ecef;
 }
