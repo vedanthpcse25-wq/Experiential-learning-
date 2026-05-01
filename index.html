@@ -1,306 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<title>Experiential-learning</title>
+    <meta charset="UTF-8">
+    <title>Experiential-learning</title>
 
 
-<link rel="stylesheet" href="projectex.css">
+    <link rel="stylesheet" href="projectex.css">
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
 
 </head>
 
 <body style="background-color: lightgray">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#"><b>Student Feedback Form</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><b>Student Feedback Form</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home" id="navHome">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about" id="navAbout">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact" id="navContact">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-<div id="home" class="container my-5">
-
-<h2 class="text-center text-primary mb-4">
-    <u><i>Student Feedback Form</i></u>
-</h2>
-
-<form id="feedbackForm">
-
-<div class="card mb-4">
-    <div class="card-header bg-primary text-white">
-        Student Details
-    </div>
-
-    <div class="card-body">
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">First Name</label>
-                <input type="text" name="first_name" id="firstName" class="form-control" required>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Last Name</label>
-                <input type="text" name="last_name" id="lastName" class="form-control" required>
-            </div>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Email</label>
-            <input type="email" name="user_email" id="userEmail" class="form-control" required>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Student ID</label>
-            <input type="text" name="student_id" id="studentId" class="form-control" required>
-        </div>
-
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-header bg-success text-white">
-        Course Details
-    </div>
-
-        <h5 class="text-secondary mb-3"><i>Academic Information</i></h5>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Semester</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>Semester 1</option>
-                    <option>Semester 2</option>
-                    <option>Semester 3</option>
-                    <option>Semester 4</option>
-                    <option>Semester 5</option>
-                    <option>Semester 6</option>
-                    <option>Semester 7</option>
-                    <option>Semester 8</option>
-                </select>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Year</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>First Year</option>
-                    <option>Second Year</option>
-                    <option>Third Year</option>
-                    <option>Final Year</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Batch</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>C1</option>
-                    <option>C2</option>
-                    <option>C3</option>
-                </select>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Section</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>A</option>
-                    <option>B</option>
-                    <option>C</option>
-                    <option>D</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Department</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>CSE</option>
-                    <option>ECE</option>
-                    <option>DS</option>
-                    <option>ME</option>
-                    <option>CE</option>
-                    <option>IT</option>
-                </select>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Branch</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>Computer Science Engineering</option>
-                    <option>Electronics & Communication Engineering</option>
-                    <option>Data Science</option>
-                    <option>Mechanical Engineering</option>
-                    <option>Civil Engineering</option>
-                    <option>Information Technology</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <div class="col-md-6">
-                <label class="form-label">Course</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>WDL Lab</option>
-                    <option>SMP Lab</option>
-                    <option>EE Lab</option>
-                    <option>LLC Lab</option>
-                    <option>Maths</option>
-                    <option>English</option>
-                </select>
-            </div>
-
-            <div class="col-md-6">
-                <label class="form-label">Faculty</label>
-                <select class="form-select" required>
-                    <option value="">Options</option>
-                    <option>Prof. Mayur Kadu</option>
-                    <option>Prof. Abhijeet Thakur</option>
-                    <option>Prof.Abhishek Dhonkse</option>
-                    <option>Prof. Nikhil Chaudhari</option>
-                    <option>Prof. Yogesh Panke</option>
-                    <option>Prof. Shama Khan</option>
-                </select>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="mb-3">
-            <label class="form-label"><b>Course Difficulty</b></label><br>
-            <input type="radio" name="difficulty" required> Easy
-            <input type="radio" name="difficulty"> Medium
-            <input type="radio" name="difficulty"> Hard
-        </div>
-
-        <hr>
-
-        <div class="mb-3">
-            <label class="form-label">Rate the Course</label>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rating" required>
-                <label class="form-check-label">1 - Poor</label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rating">
-                <label class="form-check-label">2 - Fair</label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rating">
-                <label class="form-check-label">3 - Good</label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rating">
-                <label class="form-check-label">4 - Very Good</label>
-            </div>
-
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="rating">
-                <label class="form-check-label">5 - Excellent</label>
-            </div>
-        </div>
-
-        <hr>
-
-        <div class="mb-3">
-            <label class="form-label">Date</label>
-            <input type="date" class="form-control" required>
-        </div>
-
-        <hr>
-
-        <div class="mb-3">
-            <label class="form-label">Comments</label>
-            <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
-        </div>
-
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-danger">Reset</button>
-        </div>
-
-    </div>
-</div>
-
-</form>
-</div>
-
-<div class="container my-5">
-    <div class="card">
-        <div class="card-header bg-info text-white">
-            About & Contact
-        </div>
-
-        <div class="card-body">
-            <section id="about" class="mb-4">
-                <h4 class="text-success">About Student Feedback Form</h4>
-                <p>This is a <strong>Student Feedback Form</strong> designed to collect feedback from students about their courses, instructors, and overall learning experience.</p>
-
-                <ul>
-                    <li>Student personal details collection</li>
-                    <li>Course and instructor feedback</li>
-                    <li>Rating system</li>
-                    <li>Anonymous feedback option</li>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" id="navHome">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" id="navAbout">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" id="navContact">Contact</a>
+                    </li>
                 </ul>
-            </section>
+            </div>
+        </div>
+    </nav>
 
-            <hr>
+    <div id="home" class="container my-5">
 
-            <section id="contact">
-                <h4 class="text-primary">Contact Info</h4>
-                <p><strong>Email:</strong> vedanthp.cse25@sbjit.edu.in</p>
-                <p><strong>Phone:</strong> 7385038223</p>
-            </section>
+        <h2 class="text-center text-primary mb-4">
+            <u><i>Student Feedback Form</i></u>
+        </h2>
+
+        <form id="feedbackForm">
+
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    Student Details
+                </div>
+
+                <div class="card-body">
+
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">First Name</label>
+                            <input type="text" name="first_name" id="firstName" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" name="last_name" id="lastName" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" name="user_email" id="userEmail" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Student ID</label>
+                        <input type="text" name="student_id" id="studentId" class="form-control" required>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    Course Details
+                </div>
+
+                <h5 class="text-secondary mb-3"><i>Academic Information</i></h5>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Semester</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                            <option>Semester 7</option>
+                            <option>Semester 8</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Year</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>First Year</option>
+                            <option>Second Year</option>
+                            <option>Third Year</option>
+                            <option>Final Year</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Batch</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>C1</option>
+                            <option>C2</option>
+                            <option>C3</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Section</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>A</option>
+                            <option>B</option>
+                            <option>C</option>
+                            <option>D</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Department</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>CSE</option>
+                            <option>ECE</option>
+                            <option>DS</option>
+                            <option>ME</option>
+                            <option>CE</option>
+                            <option>IT</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Branch</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>Computer Science Engineering</option>
+                            <option>Electronics & Communication Engineering</option>
+                            <option>Data Science</option>
+                            <option>Mechanical Engineering</option>
+                            <option>Civil Engineering</option>
+                            <option>Information Technology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Course</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>WDL Lab</option>
+                            <option>SMP Lab</option>
+                            <option>EE Lab</option>
+                            <option>LLC Lab</option>
+                            <option>Maths</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Faculty</label>
+                        <select class="form-select" required>
+                            <option value="">Options</option>
+                            <option>Prof. Mayur Kadu</option>
+                            <option>Prof. Abhijeet Thakur</option>
+                            <option>Prof.Abhishek Dhonkse</option>
+                            <option>Prof. Nikhil Chaudhari</option>
+                            <option>Prof. Yogesh Panke</option>
+                            <option>Prof. Shama Khan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <label class="form-label"><b>Course Difficulty</b></label><br>
+                    <input type="radio" name="difficulty" required> Easy
+                    <input type="radio" name="difficulty"> Medium
+                    <input type="radio" name="difficulty"> Hard
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <label class="form-label">Rate the Course</label>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating" required>
+                        <label class="form-check-label">1 - Poor</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating">
+                        <label class="form-check-label">2 - Fair</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating">
+                        <label class="form-check-label">3 - Good</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating">
+                        <label class="form-check-label">4 - Very Good</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="rating">
+                        <label class="form-check-label">5 - Excellent</label>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <label class="form-label">Date</label>
+                    <input type="date" class="form-control" required>
+                </div>
+
+                <hr>
+
+                <div class="mb-3">
+                    <label class="form-label">Comments</label>
+                    <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="reset" class="btn btn-danger">Reset</button>
+                </div>
+
+            </div>
+    </div>
+
+    </form>
+    </div>
+
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-header bg-info text-white">
+                About & Contact
+            </div>
+
+            <div class="card-body">
+                <section id="about" class="mb-4">
+                    <h4 class="text-success">About Student Feedback Form</h4>
+                    <p>This is a <strong>Student Feedback Form</strong> designed to collect feedback from students about
+                        their courses, instructors, and overall learning experience.</p>
+
+                    <ul>
+                        <li>Student personal details collection</li>
+                        <li>Course and instructor feedback</li>
+                        <li>Rating system</li>
+                        <li>Anonymous feedback option</li>
+                    </ul>
+                </section>
+
+                <hr>
+
+                <section id="contact">
+                    <h4 class="text-primary">Contact Info</h4>
+                    <p><strong>Email:</strong> vedanthp.cse25@sbjit.edu.in</p>
+                    <p><strong>Phone:</strong> 7385038223</p>
+                </section>
+            </div>
         </div>
     </div>
-</div>
 
 
 
-<div id="successMessage" class="text-center mt-5" style="display: none;">
-    <h2 class="text-success">Feedback Submitted Successfully!</h2>
-    <button id="goHomeBtn" class="btn btn-primary mt-3">Go Back Home</button>
-</div>
-
-<footer class="site-footer bg-dark text-white py-3">
-    <div class="container text-center">
-        <small>&copy;|Experiential Learning|</small>
-        <script src="project.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <div id="successMessage" class="text-center mt-5" style="display: none;">
+        <h2 class="text-success">Feedback Submitted Successfully!</h2>
+        <button id="goHomeBtn" class="btn btn-primary mt-3">Go Back Home</button>
     </div>
-</footer>
+
+    <footer class="site-footer bg-dark text-white py-3">
+        <div class="container text-center" style="background-color: transparent;">
+            <h5 class="m-0" style="color: white; letter-spacing: 1px;">| Experiential Learning |</h5>
+            <script src="project.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+        </div>
+    </footer>
 
 </body>
 

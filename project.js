@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         const submitBtn = form.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn.innerText;
         submitBtn.innerText = "Submitting...";
 
         const formData = new FormData(form);
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (response.status == 200) {
                     submitBtn.innerText = originalBtnText;
 
-                    // Hide all top-level page content except the success message
+
                     document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
                         el.style.display = 'none';
                     });
@@ -47,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         goHomeBtn.addEventListener("click", function () {
             successMessage.style.display = "none";
             document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
-                el.style.display = ''; // Show all elements again
+                el.style.display = '';
             });
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
@@ -62,7 +61,7 @@ function closePopup() {
     document.getElementById("successPopup").style.display = "none";
 }
 
-// Navigation handlers: scroll to sections within the same page
+
 document.addEventListener("DOMContentLoaded", function () {
     const navHome = document.getElementById("navHome");
     const navAbout = document.getElementById("navAbout");
