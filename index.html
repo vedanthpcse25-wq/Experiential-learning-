@@ -55,23 +55,23 @@
         <div class="row mb-3">
             <div class="col-md-6">
                 <label class="form-label">First Name</label>
-                <input type="text" class="form-control" required>
+                <input type="text" name="first_name" id="firstName" class="form-control" required>
             </div>
 
             <div class="col-md-6">
                 <label class="form-label">Last Name</label>
-                <input type="text" class="form-control" required>
+                <input type="text" name="last_name" id="lastName" class="form-control" required>
             </div>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Email</label>
-            <input type="email" class="form-control" required>
+            <input type="email" name="user_email" id="userEmail" class="form-control" required>
         </div>
 
         <div class="mb-3">
             <label class="form-label">Student ID</label>
-            <input type="text" class="form-control" required>
+            <input type="text" name="student_id" id="studentId" class="form-control" required>
         </div>
 
     </div>
@@ -242,7 +242,7 @@
 
         <div class="mb-3">
             <label class="form-label">Comments</label>
-            <textarea class="form-control" rows="4" required></textarea>
+            <textarea class="form-control" name="message" id="message" rows="4" required></textarea>
         </div>
 
         <div class="text-center">
@@ -288,8 +288,9 @@
 
 
 
-<div id="successMessage">
+<div id="successMessage" class="text-center mt-5" style="display: none;">
     <h2 class="text-success">Feedback Submitted Successfully!</h2>
+    <button id="goHomeBtn" class="btn btn-primary mt-3">Go Back Home</button>
 </div>
 
 <footer class="site-footer bg-dark text-white py-3">

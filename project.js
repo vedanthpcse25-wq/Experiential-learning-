@@ -6,12 +6,52 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        // Hide all top-level page content except the success message
-        document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
-            el.style.display = 'none';
-        });
-        successMessage.style.display = "block";
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.innerText;
+        submitBtn.innerText = "Submitting...";
+
+        const formData = new FormData(form);
+        // Added the Access Key from Web3Forms
+        formData.append("access_key", "04bc14c3-f045-4028-839b-0c1003a5bda4");
+
+        fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        })
+            .then(async (response) => {
+                let json = await response.json();
+                if (response.status == 200) {
+                    submitBtn.innerText = originalBtnText;
+
+                    // Hide all top-level page content except the success message
+                    document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
+                        el.style.display = 'none';
+                    });
+                    successMessage.style.display = "block";
+                    form.reset();
+                } else {
+                    console.log(response);
+                    submitBtn.innerText = originalBtnText;
+                    alert('Oops! Something went wrong: ' + json.message);
+                }
+            })
+            .catch((error) => {
+                console.log(error);
+                submitBtn.innerText = originalBtnText;
+                alert('Something went wrong!');
+            });
     });
+
+    const goHomeBtn = document.getElementById("goHomeBtn");
+    if (goHomeBtn) {
+        goHomeBtn.addEventListener("click", function () {
+            successMessage.style.display = "none";
+            document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
+                el.style.display = ''; // Show all elements again
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 
 });
 function showPopup() {
