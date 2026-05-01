@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
         e.preventDefault();
 
         const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = "Submit"; // Saving original text
         submitBtn.innerText = "Submitting...";
 
         const formData = new FormData(form);
@@ -22,6 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (response.status == 200) {
                     submitBtn.innerText = originalBtnText;
 
+
+                    const feedbackData = {
+                        name: formData.get("first_name") + " " + formData.get("last_name"),
+                        email: formData.get("user_email"),
+                        studentId: formData.get("student_id"),
+                        message: formData.get("message"),
+                        date: new Date().toLocaleDateString()
+                    };
+                    let history = JSON.parse(sessionStorage.getItem("feedbackHistory")) || [];
+                    history.push(feedbackData);
+                    sessionStorage.setItem("feedbackHistory", JSON.stringify(history));
+                    loadHistory(); // Refresh history display
 
                     document.querySelectorAll('body > *:not(#successMessage)').forEach(function (el) {
                         el.style.display = 'none';
@@ -53,19 +66,42 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-function showPopup() {
-    document.getElementById("successPopup").style.display = "flex";
+function loadHistory() {
+    const container = document.getElementById("historyContainer");
+    if (!container) return;
+
+    let history = JSON.parse(sessionStorage.getItem("feedbackHistory")) || [];
+
+    if (history.length === 0) {
+        container.innerHTML = '<p class="text-muted text-center">No feedback submitted yet.</p>';
+        return;
+    }
+
+    let html = "";
+    history.slice().reverse().forEach((item) => {
+        html += `
+        <div class="col-md-6 mb-3">
+            <div class="card shadow-sm border-warning">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">${item.name} <small class="text-muted" style="font-size:12px;">(${item.date})</small></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">ID: ${item.studentId} | Email: ${item.email}</h6>
+                    <p class="card-text"><i>"${item.message}"</i></p>
+                </div>
+            </div>
+        </div>`;
+    });
+    container.innerHTML = html;
 }
 
-function closePopup() {
-    document.getElementById("successPopup").style.display = "none";
-}
+// Load history initially
+document.addEventListener("DOMContentLoaded", loadHistory);
 
 
 document.addEventListener("DOMContentLoaded", function () {
     const navHome = document.getElementById("navHome");
     const navAbout = document.getElementById("navAbout");
     const navContact = document.getElementById("navContact");
+    const navHistory = document.getElementById("navHistory");
     const mainNav = document.getElementById("mainNav");
 
     function scrollToId(id) {
@@ -93,5 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (navContact) navContact.addEventListener("click", function (e) {
         e.preventDefault();
         scrollToId('contact');
+    });
+
+    if (navHistory) navHistory.addEventListener("click", function (e) {
+        e.preventDefault();
+        scrollToId('historySection');
     });
 });
