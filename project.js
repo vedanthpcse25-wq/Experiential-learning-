@@ -93,7 +93,6 @@ function loadHistory() {
     container.innerHTML = html;
 }
 
-// Load history initially
 document.addEventListener("DOMContentLoaded", loadHistory);
 
 
